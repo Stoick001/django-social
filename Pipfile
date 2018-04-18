@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+"django-bootstrap3" = "==9.1.0"
+django-braces = "==1.12.0"
+pytz = "==2018.4"
+Django = "==2.0.4"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"

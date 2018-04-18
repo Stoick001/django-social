@@ -1,0 +1,23 @@
+<a class="post" href="{% url 'posts:single' username=post.user.username pk=post.pk %}">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="card-heading">{{post.message}}</h3>
+      <h5 class="card-text">
+        <span class="username">
+          <a class="card-link" href="{% url 'posts:for_user' username=post.user.username %}">@{{post.user.username}}</a>
+        </span><br>
+        <time class="time">
+          <span>{{post.created_at}}</span>
+        </time>
+      </h5>
+
+      <div>
+        {% if user.is_authenticated and post.user == user%}
+          <a class="btn btn-warning btn-fill btn-white" href="{% url 'posts:delete' pk=post.pk %}" title="delete" class="btn btn-simple" aria-hidden='true'>
+            <span class="">Delete</span>
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</a>

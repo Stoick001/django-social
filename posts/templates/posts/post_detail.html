@@ -1,0 +1,16 @@
+{% extends 'posts/post_base.html' %}
+
+{% block prepost %}
+<div class="col-12">
+  <h1>@{{post.user.username}} post:</h1>
+  {% include 'posts/_post.html' %}
+</div>
+{% endblock %}
+
+{% block post_content %}
+  <div class="col-6">
+    {% for post in post_list %}
+      {% include 'posts/_post.html' %}
+    {% endfor %}
+  </div>
+{% endblock %}

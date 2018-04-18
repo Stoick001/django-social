@@ -1,0 +1,17 @@
+{% extends 'posts/post_base.html' %}
+
+{% block post_content %}
+<h4 class="col-12">Create a new Post</h4>
+<form class="col-12" id="postForm" action="{% url 'posts:create' %}" method="post">
+  {% csrf_token %}
+
+  {% for field in form %}
+    <div class="form-group">
+      <label>{{field.label}}</label>
+      {{field}}
+    </div>
+  {% endfor %}
+  <input type="submit" class="btn btn-primary btn-large" value="Post">
+  <a class="btn btn-warning btn-white" href="{% url 'groups:all' %}">Cancel</a>
+</form>
+{% endblock %}

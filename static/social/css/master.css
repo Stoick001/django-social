@@ -1,0 +1,37 @@
+.mycontent {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  margin: auto;
+  z-index: 5;
+}
+
+.mynav {
+  z-index: 10;
+}
+
+.btn-white,
+.btn-white:visited {
+  color: #fff;
+}
+
+.col-blk,
+.col-blk:hover,
+.col-blk:visited {
+  color: #333;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  padding: 15px;
+}
+.content {
+  margin-bottom: 15px;
+}
+
+.post,
+.post:hover,
+.post:visited {
+  color: #333;
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+{% extends 'groups/group_base.html' %}
+
+{% block group_content %}
+<h4 class="col-12">Create a new group!</h4>
+<form class="col-12" action="{% url 'groups:create' %}" method="post" id='groupForm'>
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Create" class="btn btn-primary btn-large">
+  <a class="btn btn-warning btn-white" href="{% url 'groups:all' %}">Cancel</a>
+</form>
+{% endblock %}
